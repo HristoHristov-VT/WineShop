@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+@using WineShop.Models
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table cellpadding="2" cellspacing="2" border="1">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quanty</th>
+                 
+            </tr>
+
+            @foreach (Product p in ViewBag.ListProducts)
+            {
+
+                <tr>
+                    <td>@p.id</td>
+                    <td>@p.Name</td>
+                    <td>@p.Price</td>
+
+                    <td>@p.Quanty</td>
+
+
+
+                </tr>
+
+            }
+
+
+        </table>
+        
+         
+    </div>
+</body>
+</html>
